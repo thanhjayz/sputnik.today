@@ -1,0 +1,15 @@
+//inclue library
+@import '../../../../styles/abstracts/variables';
+@import '../../../../styles/abstracts/mixins';
+ 
+//
+.leftside{
+    width: 75%;
+    padding : 0 7px;
+
+}
+.rightside{
+    width: 25%;
+    padding : 0 7px;
+
+}
