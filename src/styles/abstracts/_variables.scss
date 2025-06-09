@@ -1,0 +1,58 @@
+// 1. Màu sắc (Colors)
+//overall
+//header
+$header: (
+    "header-bg-color": #4582af,       //Màu bg header
+    "header-text-color": #fff,
+    "header-text-subMenu-color" : #444,
+);
+//body
+$body: (
+    "body-bg-color": #eef3fb, //Màu bg body
+);
+
+//component
+$primary-color: #0070f3;     // Màu chính
+$secondary-color: #ff4081;   // Màu phụ
+$background-color: #f4f4f4; // Màu nền
+$text-color: #333;           // Màu văn bản chính
+
+// 2. Phông chữ (Typography)
+//overall
+$font-family-base: "Source Sans Pro",sans-serif;
+//header
+$font-family-header: "Source Sans Pro",sans-serif;
+//body
+$font-family-base-default: 'Roboto', sans-serif;    // Phông chữ cơ bản
+$font-family-heading: 'Arial', sans-serif;  // Phông chữ cho tiêu đề
+$font-size-base: 16px;                      // Kích thước phông chữ cơ bản
+$font-size-lg: 1.25rem;                     // Kích thước phông chữ lớn
+$font-size-sm: 0.875rem;                    // Kích thước phông chữ nhỏ
+$line-height-base: 1.5;                     // Chiều cao dòng
+
+
+// 3. Kích thước (Sizing)
+$layout-width: 1140px;
+$min-layout-width: 968px;   // chiều rộng tổng thể của toàn bộ bố cục, có thể bao gồm tất cả các phần tử chính trong trang web (như header, nav, main, footer)
+// $max-width: 1200px;   // Chiều rộng tối đa của container
+// $container-padding: 20px; // Padding cho container
+
+
+
+
+
+
+
+
+
+
+
+// 4. Khoảng cách và lề (Spacing)
+$spacing-unit: 8px;   // Đơn vị khoảng cách cơ bản
+$spacing-sm: 4px;     // Khoảng cách nhỏ
+$spacing-md: 16px;    // Khoảng cách vừa
+$spacing-lg: 32px;    // Khoảng cách lớn
+
+// 5. Các cài đặt khác
+$border-radius: 4px; // Bo tròn các góc
+$box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); // Shadow cho các element

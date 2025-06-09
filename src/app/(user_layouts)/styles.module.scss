@@ -1,0 +1,31 @@
+@import '../../styles/abstracts/variables';
+@import '../../styles/abstracts/mixins';
+
+// =======================layout============================
+// .main{
+//     @include layout-width;
+//     padding-top: 14px;
+//     min-height: 70vh;
+// }
+
+// =======================page============================
+
+
+
+
+
+// =======================component Inspiration============================
+.inspiration{
+    padding: 10px 10px 10px 15px;
+    margin-top: 1000px;
+    margin-bottom: 14px;
+    h1, p{
+        margin: 0 0 11px;
+    }
+    h1{
+        font-size: 18px;
+    }
+    font-size: 14px;
+    color: #656565;
+
+}
