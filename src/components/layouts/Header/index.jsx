@@ -12,7 +12,7 @@ import Actions from '@/components/layouts/Header/Actions'
 import Searchbar from '@/components/layouts/Header/Actions/Searchbar'
 
 
-export default function header() {
+export default function Page() {
   //hàm sự kiện của nút hamberger
   const toggleMenu = () => {
     console.log("toggleMenu button")

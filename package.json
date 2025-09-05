@@ -13,6 +13,8 @@
     "@prisma/client": "^5.18.0",
     "bcrypt": "^5.1.1",
     "clsx": "^2.1.1",
+    "embla-carousel-fade": "^8.6.0",
+    "embla-carousel-react": "^8.6.0",
     "formik": "^2.4.6",
     "next": "^15.2.3",
     "next-auth": "^4.24.7",

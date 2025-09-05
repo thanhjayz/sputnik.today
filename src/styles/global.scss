@@ -1,10 +1,9 @@
-// @import '../styles/abstracts/variables';
-// @import '../styles/abstracts/mixins';
 
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 
 body{
     color: #444;
@@ -26,7 +25,7 @@ body{
     @media (max-width: 968px) {
     width: 100%;
     }
-    @apply max-w-[1140px] m-auto 
+    @apply max-w-[1140px] m-auto w-[1140px]
 }
 
 

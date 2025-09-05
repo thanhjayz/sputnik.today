@@ -26,7 +26,14 @@ module.exports = {
       animation: {
         fadeIn: 'fadeIn 0.8s ease-in-out',
         fadeOut: 'fadeOut 0.8s ease-in-out'
-      }
+      },
+      screens: {
+      sm: '640px',
+      md: '768px',   
+      lg: '1024px',     
+      xl: '1220px',   //<- Thay đổi giá trị md từ 1280px thành 1220px
+      '2xl': '1536px',
+      },
 
     },
   },

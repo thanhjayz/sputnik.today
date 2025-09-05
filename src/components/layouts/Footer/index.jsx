@@ -3,7 +3,7 @@ import clsx from 'clsx';
 import Image from 'next/image';
 import Link from 'next/link';
 
-export default function index() {
+export default function Page() {
   return (
     <footer  className="mt-[14px] border-t-[1px] border-[]rgb(216, 216, 216) bg-[#fefefe] px-[20px] py-[14px]">
       <div className='wrapper'>

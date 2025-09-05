@@ -22,7 +22,7 @@ export default function page() {
     email: Yup.string().email("email không hợp lệ").required('Trường này là bắt buộc.'),
     password: Yup.string().required('Trường này là bắt buộc.')
   })
-
+  
   return (
     <>
       <Header />
@@ -34,7 +34,7 @@ export default function page() {
           onSubmit={handleSubmit}
           validationSchema={validationSchema}>
 
-            <Form action="" className='max-w-[375px]  bg-white p-[20px] flex-col space-y-[15px]' >
+            <Form className='max-w-[375px]  bg-white p-[20px] flex-col space-y-[15px]' >
               <h1 className="text-xl text-[#bdbdbd] text-center">
                 <Link className="text-[#444444] pointer-events-none" href="/" >Đăng nhập </Link>
                 <span> </span>
