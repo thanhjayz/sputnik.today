@@ -1,17 +1,4 @@
-"use client";
-import React from "react";
-import Link from "next/link";
-import Image from "next/image";
-// import component
-
-import Wrapper from "@/components/ui/Wrapper";
-
-import ASideSection from "@/components/features/ASide/Section";
-
-import PanelWrapper from "@/components/ui/PanelWrapper";
-
-export default function page() {
-  const listGenres = [
+export const listGenres = [
     {
       _id: 1,
       name: "Giả tưởng (Fantasy)",
@@ -163,70 +150,3 @@ export default function page() {
       name: "Tiểu thuyết chính trị",
     },
   ];
-
-  return (
-    <Wrapper>
-      <Wrapper.MainSide>
-        <PanelWrapper className={"p-[13px_15px]"}>
-          <div className="book flex flex-col gap-4">
-            <div className="book_review w-[210px]">
-              <div className="bookcover ">
-                <img src="" alt="" />
-              </div>
-              <Link href={"/"} className=" ">
-                Đọc đoạn trích
-              </Link>
-              <button>Nghe bản audio</button>
-              <div className="row">
-                <div className="col-3">
-                  <button>Theo dõi</button>
-                </div>
-                <div className="col-1">
-                  <button>Ẩn tác phẩm</button>
-                </div>
-              </div>
-              <div className="buy flex w-full">
-                <div className="flex-1 price">750 </div>
-                <button className="flex-1 buy-button "> Mua </button>
-              </div>
-              <div className="buy-series">
-                <Link href={"/"} className="block">
-                  Mua trọn bộ{" "}
-                </Link>
-              </div>
-              <button>Tải xuống</button>
-            </div>
-            <div className="detail"></div>
-          </div>
-        </PanelWrapper>
-
-        
-        <div></div>
-        <div></div>
-      </Wrapper.MainSide>
-      <Wrapper.ASide>
-        <ASideSection>
-          <ASideSection.Title>
-            <i />
-            Bạn đã xem gần đây
-          </ASideSection.Title>
-          <ASideSection.Viewed />
-        </ASideSection>
-        <ASideSection>
-          <ASideSection.Title>
-            <i />% Đang giảm giá
-          </ASideSection.Title>
-          <ASideSection.Discounts />
-        </ASideSection>
-        <ASideSection>
-          <ASideSection.Title>Sputnik khuyến nghị</ASideSection.Title>
-          <ASideSection.LatestComments />
-        </ASideSection>
-        <ASideSection>
-          <ASideSection.Title>Bình luận gần đây</ASideSection.Title>
-          <ASideSection.LatestComments />
-        </ASideSection>
-      </Wrapper.ASide>
-    </Wrapper>
-  );
-}

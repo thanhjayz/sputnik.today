@@ -9,71 +9,9 @@ import MainSection from "@/components/features/MainSide/Section";
 import ASideSection from "@/components/features/ASide/Section";
 import Genres from "@/components/features/MainSide/Section/Genres";
 import Introduction from "@/components/features/Introduction";
+import { books } from "./data";
 
 export default function page() {
-  const books = [
-    {
-      url: "/",
-      imgUrl: "/images/СССР.png",
-      title: "Boyar - Anime1. Kẻ thắp sáng bằng khí gas. Tập 21",
-      author: "Григорий Володин",
-    },
-    {
-      url: "/",
-      imgUrl: "/images/СССР.png",
-      title: "Boyar - Anime2. Kẻ thắp sáng bằng khí gas. Tập 22",
-      author: "Григорий Володин",
-    },
-    {
-      url: "/",
-      imgUrl: "/images/СССР.png",
-      title: "Boyar - Anime3. Kẻ thắp sáng bằng khí gas. Tập 23",
-      author: "Григорий Володин",
-    },
-    {
-      url: "/",
-      imgUrl: "/images/СССР.png",
-      title: "Boyar - Anime. Kẻ thắp sáng bằng khí gas. Tập 25",
-      author: "Григорий Володин",
-    },
-    {
-      url: "/",
-      imgUrl: "/images/СССР.png",
-      title: "Boyar - Anime. Kẻ thắp sáng bằng khí gas. Tập 25",
-      author: "Григорий Володин",
-    },
-    {
-      url: "/",
-      imgUrl: "/images/СССР.png",
-      title: "Boyar - Anime. Kẻ thắp sáng bằng khí gas. Tập 25",
-      author: "Григорий Володин",
-    },
-    {
-      url: "/",
-      imgUrl: "/images/СССР.png",
-      title: "Boyar - Anime. Kẻ thắp sáng bằng khí gas. Tập 25",
-      author: "Григорий Володин",
-    },
-    {
-      url: "/",
-      imgUrl: "/images/СССР.png",
-      title: "Boyar - Anime. Kẻ thắp sáng bằng khí gas. Tập 25",
-      author: "Григорий Володин",
-    },
-    {
-      url: "/",
-      imgUrl: "/images/СССР.png",
-      title: "Boyar - Anime. Kẻ thắp sáng bằng khí gas. Tập 25",
-      author: "Григорий Володин",
-    },
-    {
-      url: "/",
-      imgUrl: "/images/СССР.png",
-      title: "Boyar - Anime. Kẻ thắp sáng bằng khí gas. Tập 25",
-      author: "Григорий Володин",
-    },
-  ];
-
   return (
     <>
       <Wrapper>
@@ -183,9 +121,7 @@ export default function page() {
             <ASideSection.Discounts />
           </ASideSection>
           <ASideSection>
-            <ASideSection.Title>
-              Bình luận gần đây
-            </ASideSection.Title>
+            <ASideSection.Title>Bình luận gần đây</ASideSection.Title>
             <ASideSection.LatestComments />
           </ASideSection>
         </Wrapper.ASide>
