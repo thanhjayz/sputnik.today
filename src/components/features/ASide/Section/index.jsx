@@ -1,11 +1,11 @@
-"use client";
-import React, { useCallback } from "react";
-import Link from "next/link";
-import Image from "next/image";
-import PanelWrapper from "@/components/ui/PanelWrapper";
-import Viewed from "@/components/features/ASide/Section/Viewed";
-import Discounts from "@/components/features/ASide/Section/Discounts";
-import LatestComments from "@/components/features/ASide/Section/LatestComments";
+  "use client";
+  import React, { useCallback } from "react";
+  import Link from "next/link";
+  import Image from "next/image";
+  import PanelWrapper from "@/components/ui/PanelWrapper";
+  import Viewed from "@/components/features/ASide/Section/Viewed";
+  import Discounts from "@/components/features/ASide/Section/Discounts";
+  import LatestComments from "@/components/features/ASide/Section/LatestComments";
 
 export default function ASideSection({ children }) {
   return (

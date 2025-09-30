@@ -1,22 +1,44 @@
 "use client";
 import React from "react";
 import Link from "next/link";
-import Image from "next/image";
+
+
 // import component
 
 import Wrapper from "@/components/ui/Wrapper";
 import ASideSection from "@/components/features/ASide/Section";
 import PanelWrapper from "@/components/ui/PanelWrapper";
 import ProductImage from "@/components/features/ProductImage";
+import BookDetailTabs from "@/components/features/BookDetailTabs";
+import BookFeedbackTabs from "@/components/features/BookFeedbackTabs";
+
+
 
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { BsFillShareFill } from "react-icons/bs";
 import { TfiMore } from "react-icons/tfi";
+import { FaPencilAlt } from "react-icons/fa";
+import { FaRegHeart } from "react-icons/fa";
+import { CiGift } from "react-icons/ci";
+import { IoSparklesSharp } from "react-icons/io5";
+import { ImPriceTags } from "react-icons/im";
+import { MdOutlineFileDownload } from "react-icons/md";
+
 const book = {
+  _id: "1",
   url: "/",
   imgUrl: "/images/СССР.png",
   title: "Boyar - Anime1. Kẻ thắp sáng bằng khí gas. Tập 21",
-  author: "Григорий Володин",
+  authors: ["Serge Winterkay", "Serge Winterkay 2", "Serge Winterkay 3"],
+  categories: [
+    { _id: "c1", name: "Trinh thám" },
+    { _id: "c2", name: "Hành động" },
+    { _id: "c3", name: "Lãng mạn" },
+  ],
+  tags: [
+    { id: 1, name: "Thanh tra chính phủ" },
+    { id: 2, name: "Trở lại Liên Xô" },
+  ],
 };
 
 export default function page() {
@@ -24,8 +46,8 @@ export default function page() {
     <Wrapper>
       <Wrapper.MainSide>
         <PanelWrapper className={"p-[15px_13px]"}>
-          <div className="book flex flex-col gap-4 text-[14px] ">
-            <div className="book_review w-[200px] p-1.5 space-y-3 p-1.5">
+          <div className="book flex gap-4 text-[14px]  ">
+            <div className="book_review w-[200px] p-1.5 space-y-3">
               <div className="bookcover w-full ">
                 <ProductImage src={book.imgUrl} />
               </div>
@@ -79,8 +101,11 @@ export default function page() {
                   Mua trọn bộ{" "}
                 </Link>
               </div>
+              <button className="block w-full text-center border border-gray-500 py-1 hover:bg-[#e6e6e6] rounded">
+                <MdOutlineFileDownload className="inline mr-1" />
+                <span>Tải xuống</span>
+              </button>
 
-              <button className="block">Tải xuống</button>
 
               <div className="flex justify-center text-xl text-[#746d90]">
                 <div className="space-x-5">
@@ -93,9 +118,86 @@ export default function page() {
                 </div>
               </div>
             </div>
-            <div className="detail"></div>
+            <div className="detail flex-1  text-[14px] space-y-1.5">
+              <p className="text-[20px] font-bold text-[#444]">{book.title}</p>
+              <div className="text-[#4582af] text-[16px]">
+                {book.authors.map((author, index) => (
+                  <Link className=" hover:underline" key={index} href={"/"}>
+                    {index > 0 && ", "}
+                    {author}
+                  </Link>
+                ))}
+              </div>
+              <div className="text-[#4582af] text-[14px]">
+                {book.categories.map((category, index) => (
+                  <Link className=" hover:underline" key={index} href={"/"}>
+                    {index > 0 && ", "}
+                    {category.name}
+                  </Link>
+                ))}
+              </div>
+              <div className="status divide-x divide-gray-400 text-gray-500 ">
+                <span className="p-[2px_4px] mr-2  rounded  text-white bg-[#4582af] border border-[#3e749d]">
+                  <FaPencilAlt className="inline mr-1" />
+                  <span className="text-[12px]">đang tiến hành</span>
+                </span>
+                <span className="px-2 py-0.5">Hôm nay lúc 04:02 </span>
+                <span className="px-2 py-0.5">302 849 CZN, 7,57 A.L.</span>
+              </div>
+              <div>
+                <span className="text-gray-400">Chu kỳ series:</span>
+                <Link
+                  href={"/"}
+                  className="ml-2 text-[#4582af] hover:underline"
+                >
+                  Thanh tra Chính phủ: Trở về Liên Xô
+                </Link>
+                <span className="ml-2"># 44</span>
+              </div>
+              <div className="flex divide-x divide-gray-400 text-gray-500 py-4 whitespace-nowrap">
+                <span className="p-[2px_4px] mr-2  rounded  text-[#405e76] flex items-center">
+                  <FaEye className="inline" />
+                  <span className="ml-2">106k</span>
+                </span>
+                <span className="px-2 py-0.5 flex items-center">
+                  <FaRegHeart className="inline text-[#d7295c]" />
+                  <span className="ml-2">Yêu thích :</span>
+                  <span className="ml-2">{(3986).toLocaleString("fr-FR")}</span>
+                </span>
+
+                <span className="px-2 py-0.5 flex items-center">
+                  <IoSparklesSharp className="inline" />
+                  <span className="ml-2">Phản ứng :</span>
+                  <span className="ml-2">{(200).toLocaleString("fr-FR")}</span>
+                </span>
+
+                <span className="px-2 py-0.5 flex items-center">
+                  <CiGift className="inline text-[#faa61e] text-[20px]" />
+                  <span className="ml-2">Giải thưởng:</span>
+                  <span className="ml-2"> 610</span>
+                </span>
+              </div>
+              <div className="text-gray-500">
+                <ImPriceTags className="inline" />
+                <span className="ml-2">Nhãn: </span>
+                {book.authors.map((author, index) => (
+                  <Link
+                    className=" hover:underline text-[#4582af]"
+                    key={index}
+                    href={"/"}
+                  >
+                    {index > 0 && ", "}
+                    {author}
+                  </Link>
+                ))}
+              </div>
+              <BookDetailTabs bookId={book._id} />
+            </div>
           </div>
         </PanelWrapper>
+
+        
+        <BookFeedbackTabs />
 
         <div></div>
         <div></div>

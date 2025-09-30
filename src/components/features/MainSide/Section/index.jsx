@@ -7,8 +7,6 @@ import MultiSlider from "@/components/features/MainSide/Section/MultiSlider";
 import SingleSlider from "@/components/features/MainSide/Section/SingleSlider";
 import Genres from "@/components/features/MainSide/Section/Genres";
 
-Genres;
-
 import { BookContext } from "@/contexts/BookContext";
 
 export default function Section({ children }) {

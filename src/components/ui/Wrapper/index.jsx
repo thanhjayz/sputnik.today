@@ -1,31 +1,34 @@
 //import s from './styles.module.scss';
-import Header from "@/components/layouts/Header";
-import Footer from "@/components/layouts/Footer";
 
-const Wrapper = ({ children }) => {
+const Wrapper = ({ children, className }) => {
   return (
     <>
-      <Header />
-      <main className="wrapper pt-[14px] w-full min-h-96 flex gap-[14px] flex-col sm:flex-row sm:items-stretch items-center">
+      <main
+        className={`wrapper w-full  flex gap-[14px] flex-col sm:flex-row  ${className}`}
+      >
+        {/* sm:items-stretch min-h-96 items-center pt-[14px] */}
         {children}
       </main>
-      <Footer />
     </>
   );
 };
 export default Wrapper;
 
-Wrapper.MainSide = function mainSide({ children }) {
+Wrapper.MainSide = function mainSide({ children, className }) {
   return (
-    <div className="flex-[3_1_0%] w-full min-w-[300px] space-y-4">
+    <div
+      className={`flex-[3_1_0%] w-full min-w-[300px] space-y-4 ${className}`}
+    >
       {children}
     </div>
   );
 };
 
-Wrapper.ASide = function aSide({ children }) {
+Wrapper.ASide = function aSide({ children, className }) {
   return (
-    <div className="flex-[1_1_0%] min-w-[200px] w-[270px] space-y-[14px]">
+    <div
+      className={`flex-[1_1_0%] min-w-[200px] w-[270px] space-y-[14px] ${className}`}
+    >
       {children}
     </div>
   );
